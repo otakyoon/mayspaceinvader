@@ -84,6 +84,9 @@ export default class InvaderController {
         this.invadersBulletController = invadersBulletController;
         this.playerBulletController=playerBulletController;
     }
+
+    // Gestion du reset pour InvaderController
+    
     reset () {
         this.currentDirection = MovingDirection.right;
         this.xVelocity = 0;
