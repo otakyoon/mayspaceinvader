@@ -64,7 +64,7 @@ export default class InvaderController {
         [2, 3, 3, 3, 3, 3, 3, 3, 2, 0],
         [0, 2, 3, 3, 3, 3, 3, 2, 0, 0]
     ];
-    
+
     waveMap = [
         [0, 0, 2, 2, 0, 0, 2, 2, 0, 0],
         [0, 2, 2, 3, 2, 2, 3, 2, 2, 0],
@@ -75,8 +75,8 @@ export default class InvaderController {
     ];
 
     invadersRows=[];
-    
-    
+
+
     constructor(canvas, invadersBulletController, playerBulletController){
         this.canvas= canvas;
 
@@ -142,16 +142,16 @@ export default class InvaderController {
         this.yVelocity = 0;
         this.defaultXVelocity = 1;
         this.defaultYVelocity = 1;
-    
+
         this.fireBulletTimerDefault = 100;
         this.fireBulletTimer = this.fireBulletTimerDefault;
-    
+
         this.moveDownTimerDefault = 30;
         this.moveDownTimer =this.moveDownTimerDefault;
 
         this.createInvaders();
 
-        
+
     }
 
 

@@ -24,7 +24,6 @@ export default class Bullet{
             this.y + this.height> sprite.y&&
             this.y <sprite.y+sprite.height){
                 if (sprite["type"]) {
-                    console.log("colision");
                     addScore(sprite["type"]);
                 } else {
                     resetScore();
