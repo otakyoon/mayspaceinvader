@@ -4,7 +4,6 @@ import Background from '../assets/background.gif';
 
 // Background du site
 let body = document.getElementsByTagName('body')[0];
-console.log(body);
 body.style.backgroundImage = `url(${Background})`;
 
 
@@ -86,7 +85,6 @@ function resetG() {
     didWin = false;
     player.reset();
     invaderController.reset();
-    console.log("test");
 }
 
 function displayGameOver() {
@@ -104,7 +102,7 @@ function displayGameOver() {
         if (!document.getElementById("replayButton")) {
 
             let button = document.createElement("button");
-            button.id = "replayButton"; 
+            button.id = "replayButton";
             button.innerHTML = "Replay";
 
             button.addEventListener("click", () => {
@@ -122,7 +120,7 @@ function displayGameOver() {
                 }
             });
 
-            
+
             document.body.appendChild(button);
         }
     }

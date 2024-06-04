@@ -176,7 +176,7 @@ export default class InvaderController {
                 const rightMostInvader = invaderRow[invaderRow.length-1];
                 if(rightMostInvader.x+rightMostInvader.width>=this.canvas.width){
                     this.currentDirection = MovingDirection.downLeft;
-                    console.log("this.currentDirection "+this.currentDirection);
+                    // console.log("this.currentDirection "+this.currentDirection);
                     break;
                 }
             }else if(this.currentDirection === MovingDirection.downLeft){
@@ -189,8 +189,7 @@ export default class InvaderController {
                 const leftMostInvader = invaderRow[0];
                 if(leftMostInvader.x<=0){
                     this.currentDirection = MovingDirection.downRight;
-                    console.log("this.currentDirection "+this.currentDirection);
-
+                    // console.log("this.currentDirection "+this.currentDirection);
                     break;
                 }
             }else if(this.currentDirection === MovingDirection.downRight){
@@ -208,7 +207,7 @@ export default class InvaderController {
 
         if(this.moveDownTimer<=0){
             this.currentDirection = newDirection;
-            console.log("this.currentDirection "+this.currentDirection);
+            // console.log("this.currentDirection "+this.currentDirection);
 
             return true;
         }
@@ -219,7 +218,7 @@ export default class InvaderController {
         this.invadersRows.forEach((invaderRow)=>{
             invaderRow.forEach((invader, invaderIndex)=>{
                 if(this.playerBulletController.collideWith(invader)){
-                    console.log("type : ",invader.type);
+                    // console.log("type : ",invader.type);
                     if(invader.type > 1){
                         invader.type--;
                         invader.sprite.src = invader.getImage(invader.type);
