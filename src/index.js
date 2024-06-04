@@ -12,9 +12,20 @@ import InvaderController from './InvaderController';
 import Player from './player';
 import Bulletcontroller from './BulletController';
 
-// import victorySound from "../assets/sounds/victory.wav";
-// import gameOverSound from "../assets/sounds/gameover.wav";
+import bgmusic from "../assets/sounds/bg-music.wav";
 
+// jouer le son bg-music en fond à l'infini
+
+document.addEventListener('keydown', function playAudioAfterInteraction() {
+    if (!audio.play) {
+    let audio = new Audio(bgmusic);
+    audio.loop = true;
+    audio.play();
+    }
+    
+    // Supprimer l'écouteur d'événements après la première interaction
+    document.removeEventListener('click', playAudioAfterInteraction);
+});
 let canvas = document.getElementById("game");
 let ctx = canvas.getContext("2d");
 canvas.height = 600;
@@ -80,6 +91,7 @@ function resetG() {
 
 function displayGameOver() {
     if (isGameOver) {
+
         let text = didWin ? "You Win" : "Game Over";
         let textOffset = didWin ? 3.5 : 5;
 
