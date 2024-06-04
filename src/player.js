@@ -20,6 +20,8 @@ export default class Player {
         document.addEventListener("keyup", this.keyup);
     }
 
+    // Fonction reset pour le Player
+
     reset() {
         this.x = this.canvas.width / 2;
         this.y = this.canvas.height - 75;
