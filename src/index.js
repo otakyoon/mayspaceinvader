@@ -1,5 +1,12 @@
 import '../css/style.scss';
 import Space from '../assets/images/space.png';
+import Background from '../assets/background.gif';
+
+// Background du site
+let body = document.getElementsByTagName('body')[0];
+console.log(body);
+body.style.backgroundImage = `url(${Background})`;
+
 
 import InvaderController from './InvaderController';
 import Player from './player';
@@ -13,7 +20,7 @@ let ctx = canvas.getContext("2d");
 canvas.height = 600;
 canvas.width = 600;
 const background = new Image();
-background.src = Space;
+background.src = Background;
 ctx.Image = background;
 
 const playerBulletController = new Bulletcontroller(canvas, 10, "red", true);

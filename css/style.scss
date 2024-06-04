@@ -1,9 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
 body{
-    background-color: greenyellow;
     text-align: center;
+    font-family: Outfit, 'Sans-serif';
 
     h1{
-        color: green;
+        color: #e7eee7;
         display: block;
     }
     canvas{
@@ -25,12 +27,13 @@ body{
       }
 
 .score-container {
-    margin-top: 30px;
-    color: green;
+    margin-top: 50px;
+    color: #e7eee7;
     font-weight: 500;
     display: flex;
     flex-direction: column;
     gap: 10px;
+    font-size: 20px;
 
     p {
         margin: 0;
@@ -39,16 +42,25 @@ body{
     }
 
     #score {
-        font-weight: 500;
+        font-weight: 600;
+        font-size: 70px;
   }
 }
 
-.levelinfo{
-    font-size: 30px;
-    position:fixed;
-    top: 10px;
-    right: 10px;
+.levelinfo {
+    color: #e7eee7;
+    font-size: 35px;
     font-weight: 700;
+    margin-bottom: 30px;
 }
 
+#replayButton {
+    margin-top: 100px;
+    border-radius: 5px;
+}
+
+
+// Masquer la scroll bar
+::-webkit-scrollbar {
+    width: 0px;
 }
