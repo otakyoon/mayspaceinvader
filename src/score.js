@@ -2,12 +2,8 @@ let displayScore = document.getElementById("score");
 let score = 0;
 
 export function addScore(type) {
-    score = ((score) + (type * 5));
-
-    //Combo with level
     let level = document.getElementById("level").innerHTML;
-    score = score * level;
-
+    score = (score + (type * 5) * level);
     displayScore.innerHTML = score;
 }
 
