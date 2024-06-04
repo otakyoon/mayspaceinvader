@@ -14,16 +14,17 @@ import Bulletcontroller from './BulletController';
 import bgmusic from "../assets/sounds/bg-music.wav";
 
 // jouer le son bg-music en fond à l'infini
-
+let audio = new Audio(bgmusic);
+let musicIsPLaying = false;
 document.addEventListener('keydown', function playAudioAfterInteraction() {
-    if (!audio.play) {
-    let audio = new Audio(bgmusic);
-    audio.loop = true;
-    audio.play();
+    if (!musicIsPLaying) {
+        audio.loop = true;
+        audio.play();
+        musicIsPLaying=true;
     }
     
     // Supprimer l'écouteur d'événements après la première interaction
-    document.removeEventListener('click', playAudioAfterInteraction);
+    //document.removeEventListener('click', playAudioAfterInteraction);
 });
 let canvas = document.getElementById("game");
 let ctx = canvas.getContext("2d");
