@@ -152,11 +152,6 @@ export default class InvaderController {
         this.moveDownTimer =this.moveDownTimerDefault;
 
         this.createInvaders();
-<<<<<<< HEAD
-
-
-=======
->>>>>>> f2c66579b36a276c085d65456618601a239f94e4
     }
 
 
